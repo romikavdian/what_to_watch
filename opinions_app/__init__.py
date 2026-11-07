@@ -6,6 +6,4 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 
-from . import views
-from . import error_handlers
-from . import cli_commands
+from . import views, error_handlers, cli_commands  # noqa: E402, F401
